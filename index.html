@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه لپ تاپ</title>
+    <meta name="description" content="فروشگاه آنلاین لپ تاپ | خرید انواع لپ تاپ دانشجویی، گیمینگ و اداری با بهترین قیمت">
+    <meta name="keywords" content="لپ تاپ, فروشگاه لپ تاپ, خرید لپ تاپ, لپ تاپ گیمینگ">
+    <meta name="author" content="محمد صادق رضائی">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/site-nav-logo.png" type="image/png">
+    <link rel="shortcut icon" href="images/site-nav-logo.png">
+    <link rel="apple-touch-icon" href="images/site-nav-logo.png">
+
+    <!--css-->
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="home-styles.css">
+
+    <!--js-->
+    <script src="backend-simulation.js" defer="defer"></script>
+    <script src="js.cookie.js" defer = "defer"></script>
+    <script src="common.js" defer="defer"></script>
+    <script src="home-scripts.js" defer="defer"></script>
+    
+</head>
+<body>
+    <!--header------------------------------------------------------------------------------>
+    <header>
+        <nav id="nav-top">
+
+            <div id="nav-top-right">
+                <div id="nav-top-logo">
+
+                    <div id="nav-top-logo-img"></div>
+                    
+                    <div id="nav-top-logo-text">
+                       <h1>
+                            فروشگاه<br>
+                            لپ تاپ
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <div id="nav-top-middle">
+                <form id="searchForm" role="search">
+                    <input type="search" placeholder="جستجو..." >
+                    <div id="search-icon"></div>
+                    <div id="search-suggestions"></div> 
+                </form>
+            </div>
+
+            <div id="nav-top-left">
+                <a href="#">
+                    <button id="login-btn">
+                        <img src="images/login.png" alt="آیکن ورود کاربران">
+                        <p>ورود</p>
+                    </button>
+                </a>
+
+                <button id="shopping-cart-header-btn" >
+                    <div id="shopping-icon"></div>
+                    <span class="shopping-cart-header-btn-span-visible-no"></span>
+                </button>
+                
+            </div>
+        </nav>
+
+        <div class="gradient-line"></div>
+    </header>
+    <!--shopping cart--------------------------------------------------------------------------------->
+    <section id="shopping-cart" class="shopping-cart-visible-no" >
+
+         <img id="shopping-cart-close-btn" src="images/close red.png"  alt="بستن سبد خرید">
+
+        <div id="shopping-cart-empty" class="no-visible"> <!--empty state-->
+            <img src="images/shop empty.jpg" alt="سبد خرید خالی">
+            <p>سبد خرید شما خالی است</p>
+        </div>
+        
+        <div id="shopping-cart-full">  <!--full state-->
+
+            <div id="shopping-cart-items">
+                <!--itens adds here-->
+            </div>
+
+            <div class="shopping-cart-btnSubmitOrder-and-totalprice">
+                <div>
+                    <p class="shopping-cart-totalprice-above-text">  مجموع قیمت (تومان)  : </p>
+                    <p id="shopping-cart-totalprice">0</p>
+                </div>
+                <button id="shopping-cart-btnSubmitOrder">ثبت سفارش</button>
+            </div>
+
+        </div>
+       
+    </section>
+    <!--slider------------------------------------------------------------------------------->
+    <div id="slider">
+
+        <div class="slide-and-btns">
+             <div class="slides-container">
+
+                <div class="slide">
+                    <img src="images/banners/banner1.png" alt="بنر فروش لپ تاپ">
+                </div>
+                <div class="slide">
+                    <img src="images/banners/banner2.png" alt="بنر فروش لپ تاپ">
+                </div>
+                <div class="slide">
+                    <img src="images/banners/banner3.png" alt="بنر فروش لپ تاپ">
+                </div>
+
+            </div>
+
+            <button id="slider-btn-right"></button>
+            <button id="slider-btn-left"></button>
+        </div>
+       
+        <div class="slide-dots-container">
+            <span class="slide-dot"></span>
+            <span class="slide-dot"></span>
+            <span class="slide-dot"></span>
+        </div>
+
+    </div>
+    
+    <!--brands-icons------------------------------------------------------------------------->
+    <div id="brands-icons">
+        <div>
+            <div class="logo-circle">
+                <img id="hp-logo" src="images/laptop-logo/hp.png" alt="لوگوی اچ‌پی">
+            </div>
+
+            <div class="logo-circle">
+                <img id="microsoft-logo" src="images/laptop-logo/microsoft.png" alt="لوگوی مایکروسافت">
+            </div>
+
+            <div class="logo-circle">
+                <img id="lenovo-logo" src="images/laptop-logo/lenovo.png" alt="لوگوی لنوو">
+            </div>
+
+           
+        </div>
+        
+        <div>
+            <div class="logo-circle">
+                <img id="msi-logo" src="images/laptop-logo/msi.png" alt="لوگوی ام‌اس‌آی">
+            </div>
+
+             <div class="logo-circle">
+                <img id="acer-logo" src="images/laptop-logo/acer.png" alt="لوگوی ایسر">
+            </div>
+
+            <div class="logo-circle">
+                <img id="asus-logo" src="images/laptop-logo/asus.png" alt="ایسوس">
+            </div>
+        </div>
+    </div>
+
+    <!--products----------------------------------------------------------------------------->
+    <div id="products-background">
+        <div id="products-container">
+
+             <!--filters-->
+            <aside id="products-filters">
+
+                <div id="products-filters-title">
+                    <div id="products-filters-title-right">
+                        <img src="images/filter.png" alt="آیکن فیلتر محصولات">
+                        <p>فیلتر ها</p>
+                        <p id="products-filters-title-right-count"></p>
+                    </div>
+
+                    <div id="products-filters-title-left">
+                        <div id="products-filters-title-left-img" ></div>
+                    </div> 
+                </div>
+
+               
+                <div id="products-filters-content">
+
+                   <div id="products-filters-available">
+                        <label class="toggle-button">
+                            فقط کالاهای موجود
+                            <input type="checkbox">
+                        </label>
+                   </div>
+
+                   <div id="products-filters-price" class="accordion-item">
+                        <div class="accordion-header">
+                            <p>قیمت</p>
+                            <div class="accordion-header-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            
+                            <div class="range-slider">
+
+                                <input class="range-slider-input" type="range" min="0" max="600000000" value="0" step="500000" >
+                                
+                                <div class="range-handles">
+                                    <div class="handle" id="handle1"></div>
+                                    <div class="handle" id="handle2"></div>
+                                </div>
+                                
+                                <div class="range-slider-line"></div>
+                            </div>
+
+                            <div class="range-slider-outputs">
+                            
+                                <div>
+                                    <p>از :</p>
+                                    <input type="text" id="range-slider-output-min" value="" readonly >
+                                </div>
+                               <div>
+                                    <p>تا :</p>
+                                    <input type="text" id="range-slider-output-max" value="" readonly >
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="products-filters-brand" class="accordion-item">
+                        <div class="accordion-header">
+                            <p>برند</p>
+                            <div class="accordion-header-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>hp</p>
+                            </div>
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>microsoft</p>
+                            </div>
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>lenovo</p>
+                            </div>
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>msi</p>
+                            </div>
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>acer</p>
+                            </div>
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>asus</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                     <div id="products-filters-color" class="accordion-item">
+                        <div class="accordion-header">
+                            <p>رنگ</p>
+                            <div class="accordion-header-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>سفید</p>
+                            </div>
+                            
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>مشکی</p>
+                            </div>
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>سایر رنگ ها</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="products-filters-ram" class="accordion-item">
+                        <div class="accordion-header">
+                            <p>ظرفیت حافظه رم (RAM)</p>
+                            <div class="accordion-header-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>8 گیگ</p>
+                            </div>
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>16 گیگ</p>
+                            </div>
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>32 گیگ و بیشتر</p>
+                            </div>
+
+                            
+                            
+                        </div>
+                    </div>
+
+                    <div id="products-filters-cpu" class="accordion-item">
+                        <div class="accordion-header">
+                            <p>پردازنده (CPU)</p>
+                            <div class="accordion-header-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>Intel core i3</p>
+                            </div>
+
+                             <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>Intel core i5</p>
+                            </div>
+
+                             <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>Intel core i7</p>
+                            </div>
+
+                             <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>Intel core i9</p>
+                            </div>
+
+                             <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>AMD Ryzen 5</p>
+                            </div>
+
+                             <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>AMD Ryzen 7</p>
+                            </div>
+
+                             <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>AMD Ryzen 9</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div id="products-filters-gpu-brand" class="accordion-item">
+                        <div class="accordion-header">
+                            <p>برند کارت گرافیک</p>
+                            <div class="accordion-header-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>NVIDIA</p>
+                            </div>
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>AMD</p>
+                            </div>
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>Intel</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div id="products-filters-gpu-capacity" class="accordion-item">
+                        <div class="accordion-header">
+                            <p>ظرفیت کارت گرافیک</p>
+                            <div class="accordion-header-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>4 گیگ</p>
+                            </div>
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>6 گیگ</p>
+                            </div>
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>8 گیگ</p>
+                            </div>
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>10 گیگ</p>
+                            </div>
+                            
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>12 گیگ</p>
+                            </div>
+
+                            <div class="custom-checkbox-item">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox-box"></span>
+                                </label>
+                                <p>16 گیگ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </aside>
+
+            <div id="products-sort-and-items">
+                <!--sort-->
+                <div id="products-sort">
+                    <div id="products-sort-title">
+                        <img src="images/sort.png" alt="آیکن مرتب‌سازی محصولات">
+                        <p>مرتب سازی :</p>
+                    </div>
+                    <p class="products-sort-item active">جدید ترین</p>
+                    <p class="products-sort-item">پر فروش ترین</p>
+                    <p class="products-sort-item">ارزان ترین</p>
+                    <p class="products-sort-item">گران ترین</p>
+                </div>
+
+                <!--items-->
+               <div id="products-items-container">
+                    <!--products adds here-->
+                </div>
+
+            </div>
+            
+        </div>
+         <!--pagination-->
+        <div id="pagination">
+            <button class="pagination-nextleftbtn pagination-btn" id="pagination-prev-btn"></button>
+            <div id="pagination-numbers"><!--Numbers are added here--></div> 
+            <button class="pagination-nextleftbtn pagination-btn" id="pagination-next-btn"></button>
+        </div>
+
+    </div>
+
+    <!--two image---------------------------------------------------------------------------------------->
+    <div id="two-image">
+       <img src="images/two-images/gamer.png" alt="گیمر">
+       <img src="images/two-images/programmer.png" alt="مهندس ، برنامه نویس">
+    </div>
+
+    <!--articles--------------------------------------------------------------------------------------------->
+   <section id="articles-container">
+
+        <a href="#">
+            <article>
+                <img src="images/articles/buy.png" alt="راهنمای خرید لپ تاپ">
+                <h4>راهنمای خرید لپ تاپ</h4>
+                <p>در این مقاله شما را برای انتخاب بهترین گزینه راهنمایی می‌کنیم</p>
+            </article>
+        </a>
+
+        <a href="#">
+            <article>
+                <img src="images/articles/company.png" alt="شرکت‌های سازنده لپ تاپ">
+                <h4>شرکت های سازنده لپ تاپ</h4>
+                <p>در این مقاله برند های سازنده ی لپ تاپ را بررسی می کنیم</p>
+            </article>
+        </a>
+
+        <a href="#">
+            <article>
+                <img src="images/articles/parts.png" alt="قطعات لپ تاپ">
+                <h4>آشنایی با قطعات لپ تاپ</h4>
+                <p>در این مقاله با قطعات لپ تاپ و عملکرد آن ها آشنا می شوید</p>
+            </article>
+        </a>
+
+        <a href="#">
+            <article>
+                <img src="images/articles/history.png" alt="تاریخچه ساخت کامپیوتر و لپ تاپ">
+                <h4>تاریخچه ی ساخت کامپیوتر</h4>
+                <p>در این مقاله تاریخچه ی ساخت کامپیوتر و لپ تاپ آشنا می شوید</p>
+            </article>
+        </a>
+
+    </section>
+
+    <!--footer----------------------------------------------------------------------------------------------->
+    <footer>
+        <a href="#" id="footer-tell-and-support">
+            <p>پشتیبانی هر روز از 8 صبح تا 11  شب</p>
+            <div id="footer-tell">
+                <p>021-123456789</p>
+                <img src="images/contacts/call.png" alt="شماره تماس پشتیبانی فروشگاه لپ تاپ">
+            </div>
+        </a>
+
+        <div id="footer-map-and-about-us">
+
+             <div id = "footer-about-us" >
+                <div id = "footer-about-us-title" >
+                    <h4>درباره ی</h4>
+                    <h4>فروشگاه لپ تاپ </h4>
+                </div>
+                <p id="footer-about-us-text">
+                    فروشگاه لپ‌تاپ ما از سال ۱۳۹۵ فعالیت خود را با هدف ارائه‌ی جدیدترین و باکیفیت‌ترین لپ‌تاپ‌ها آغاز کرده است.
+                    ما با سال‌ها تجربه در زمینه فروش انواع لپ‌تاپ‌های دانشجویی، اداری، گیمینگ و حرفه‌ای، تلاش می‌کنیم
+                    بهترین انتخاب را متناسب با نیاز و بودجه‌ی شما فراهم کنیم. تضمین اصالت کالا، مشاوره‌ی تخصصی قبل از خرید
+                    و پشتیبانی واقعی پس از فروش، دلیل اعتماد هزاران مشتری به فروشگاه ماست.
+                </p>
+                <div id="footer-about-us-address">
+                    <p>آدرس :</p>
+                    <p>ایران ، تهران ، برج آزادی ، فروشگاه لپ تاپ</p>
+                </div>
+               
+            </div>
+            
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3240.0712286705425!2d51.333809539924275!3d35.699864761522385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1769934435262!5m2!1sen!2s"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <div id="footer-social-networks">
+            <a href="#" target="_blank">
+                <img src="images/contacts/instagram.png" alt="صفحه اینستاگرام فروشگاه لپ تاپ">
+                <p> @instagramId </p>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>
