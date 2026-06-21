@@ -1,7 +1,9 @@
 <h1 style="text-decoration: none; border-bottom: none;">💻 Laptop Store</h1>
 
-## 🌐 Live Demo | مشاهده آنلاین
-[Click here to view the live website | برای مشاهده آنلاین پروژه اینجا کلیک کنید](https://programmermsr.github.io/laptop-store/)
+## 🌐 Live Demo | مشاه آنلاین
+<a href="https://programmermsr.github.io/laptop-store/" target="_blank" style="text-decoration: none;">
+  🚀 Click here to view the liv website | برای مشاهده آنلاین پروژه اینجا کلیک کنید
+</a>
 
 ---
 
